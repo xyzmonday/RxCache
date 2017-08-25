@@ -19,3 +19,4 @@
 
 ## RxCache设计图
 
+ ![image](https://github.com/xyzmonday/RxCache/raw/master/screenshots/pic1.png)

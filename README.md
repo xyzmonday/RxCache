@@ -97,8 +97,8 @@ CacheAndRemote {
  ```
  注意这不在使用firstOrError，而是使用switchIfEmpty。因为这加载完缓存之后，需要通过remote加载最新的远程数据。如果cache和remote都为获取到数据，那么将抛出NoSuchElementException异常。
  
- * 注解使用
- 为了更加方便，设计了一个用于缓存的注解。该注解主要就是配置缓存的策略，那么RxCache怎么拿到注解，然后结合已经实现的Transform，从而实现缓存。我们知道，Retrofit实际上为我们实现了4个adapter，那么我们找到RxJavaCallAdapter接口，将call拦截住，然后将call返回的流根据注解信息给Transform。主要代码如下:
+ * 注解使用<br/>
+为了更加方便，设计了一个用于缓存的注解。该注解主要就是配置缓存的策略，那么RxCache怎么拿到注解，然后结合已经实现的Transform，从而实现缓存。我们知道，Retrofit实际上为我们实现了4个adapter，那么我们找到RxJavaCallAdapter接口，将call拦截住，然后将call返回的流根据注解信息给Transform。主要代码如下:
  
  ```Java
  （RxJava2CallAdapter）
